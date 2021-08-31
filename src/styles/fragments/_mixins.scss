@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+@mixin hoverEffect($color: #fff) {
+  color: $color;
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px #0000004b;
+}
