@@ -20,6 +20,7 @@ module.exports = {
     filename: "index.js",
     publicPath: "./",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
 
   resolve: {
@@ -45,12 +46,10 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: {
-          loader: "file-loader",
-          //   option: {
-          //     name: "[name].[hash].[ext]",
-          //     outputPath: "imgs",
-          //   },
+        loader: "file-loader",
+        options: {
+          outputPath: "assets",
+          publicPath: "./assets",
         },
       },
     ],
