@@ -11,22 +11,24 @@ const ImageWrapper = styled.div`
   }
 `;
 
-export const App = () => {
+export const App = (): JSX.Element => {
+  const [count, setCount] = React.useState(1);
+
+  React.useEffect(() => {
+    console.log(count);
+  }, []);
+
   return (
     <div>
       <main>
         <ImageWrapper>
-          <img
-            src={require("./assets/headphone.jpg").default}
-            alt="headphone"
-          />
+          <img src={require("./assets/headphone.jpg")} alt="headphone" />
         </ImageWrapper>
         <h2>concept studio</h2>
         <h3>
           <IoLocationSharp /> LAHORE, PAK
         </h3>
-        <br />
-        <p>{new Date().toString()}</p>
+        <br /> <p>{new Date().toString()}</p>
       </main>
     </div>
   );
