@@ -1,7 +1,5 @@
-import './styles/main.scss';
+console.log("new webpack setup working!")
 
-export const addInt = (a: number, b: number): number => {
-    return a + b;
-};
+const sumFunc = (a: number, b: number) => a + b
 
-console.log('answer: ', addInt(1, 2));
+console.log(sumFunc(1, 2))
