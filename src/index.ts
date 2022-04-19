@@ -1,5 +1,4 @@
-console.log("new webpack setup working!")
-
-const sumFunc = (a: number, b: number) => a + b
-
-console.log(sumFunc(1, 2))
+const message: HTMLElement | null = document.querySelector('#root');
+if (message) {
+    message.innerHTML = 'ThreeJS Project';
+}

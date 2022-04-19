@@ -11,4 +11,5 @@ export const devServerConfig = {
     static: {
         publicPath: '/',
     },
+    port: 5500,
 };
